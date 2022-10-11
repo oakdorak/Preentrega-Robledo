@@ -2,12 +2,15 @@ import React from "react";
 import styled from 'styled-components'
 import Carrito from "../Cart/CartWidget";
 import { Link } from 'react-router-dom';
-
+import conejelly from './conejelly.png'
 
 const Navbar = () => {
     return(
         <NavContainer>
+        <div>
             <h2>Robbit House</h2>
+            <img src={conejelly} height="50" width="50"  alt="" />
+        </div>
             <div>
              
         <ul>
@@ -38,8 +41,12 @@ const NavContainer = styled.nav`
         height: 35px;
         
     }
+    div{
+        display: flex;
+        align-items: left;
+    }
     a{
-        color: #bbb47c;
+        color: #a2c2a6;
         font weight: bold;
         justify-content: space-between;
         text-decoration: none;

@@ -9,13 +9,13 @@ const Menu = () => {
         .then(prod => setProducto(prod))
     },[]);
     return (
-        producto.map((prod) =><div>
-         <div>
-            Soy un {prod.title}
-        </div>
-        <div>
-            <img src={prod.img} height='100' width='100' alt=''/>
-        </div>
+        producto.map((prod) =>  <div>
+            <div>
+                Soy un {prod.title}
+            </div>
+            <div>
+                <img src={prod.img} height='100' width='100' alt=''/>
+            </div>
         </div> )
     )
 }
