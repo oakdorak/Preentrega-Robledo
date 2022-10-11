@@ -14,7 +14,7 @@ const Menu = () => {
             Soy un {prod.title}
         </div>
         <div>
-            <img src={prod.img} alt=''/>
+            <img src={prod.img} height='100' width='100' alt=''/>
         </div>
         </div> )
     )
