@@ -1,4 +1,5 @@
 import React from "react";
+import data from "./Products.json"
 
 const gummy = ({precio,id, concentracion, img, title}) => {
     return(

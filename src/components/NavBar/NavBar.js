@@ -1,17 +1,25 @@
 import React from "react";
 import styled from 'styled-components'
 import Carrito from "../Cart/CartWidget";
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
     return(
         <NavContainer>
             <h2>Robbit House</h2>
             <div>
-                <a href="/">Home</a>
-                <a href="/">About</a>
-                <a href="/">Shop</a>
-                <a href="/">Animations</a>
-                <Carrito/>
+             
+        <ul>
+        <li>
+          <Link to={'/'}>Home</Link>
+        </li>
+        <li>
+          <Link to={'/menu'}>Gomitas</Link>
+        </li>
+            <Carrito/>
+      </ul>
+
             </div>
         </NavContainer>
         
@@ -28,6 +36,7 @@ const NavContainer = styled.nav`
     svg{
         width: 35px;
         height: 35px;
+        
     }
     a{
         color: #bbb47c;
