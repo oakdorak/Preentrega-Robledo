@@ -24,11 +24,13 @@ const Menu = () => {
 }
 
 const ItemContainer = styled.nav`
-    div .card{
-        min-width: 28rem ;
-        display: flex;
+    .card{
+        box-shadow: 0 0 10px 5px;
+        border-radius: $radius;
+        min-width:16rem;
     }
-    {
+    *{
+    max-width: 18rem;
     font-weight: bold;
     color: #a2c2a6;
     text-align: center;
