@@ -12,6 +12,7 @@ const Navbar = () => {
             <img src={conejelly} height="50" width="50"  alt="" />
         </div>
             <div>
+            <Carrito Link to={'/cart'}/>
              
         <ul>
         <li>
@@ -20,7 +21,6 @@ const Navbar = () => {
         <li>
           <Link to={'/menu'}>Gomitas</Link>
         </li>
-            <Carrito/>
       </ul>
 
             </div>

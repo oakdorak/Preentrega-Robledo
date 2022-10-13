@@ -1,23 +1,39 @@
 import { useState, useEffect } from "react";
 import React from "react";
+import styled from "styled-components";
 
 const Menu = () => {
-    const[producto, setProducto] = useState([])
+    const[productos, setProducto] = useState([])
     useEffect(() => {
-        fetch('./products.json')
+        fetch('https://upcdn.io/12a1xqt/raw/products-7Dmy.json')
         .then(res => res.json())
         .then(prod => setProducto(prod))
     },[]);
+
     return (
-        producto.map((prod) =>  <div>
-            <div>
-                Soy un {prod.title}
-            </div>
-            <div>
-                <img src={prod.img} height='100' width='100' alt=''/>
-            </div>
-        </div> )
-    )
+        productos.map((prod) =>
+    <ItemContainer>
+    <div className="card" key={prod.id}>
+            <h1> Gomita de {prod.title}</h1><br></br>
+                <img src={prod.img} height='100' width='100' alt="" /><br></br>
+           <p>{prod.concentracion} - ${prod.precio}</p>
+           <button>más info</button>
+    </div>
+    </ItemContainer>
+        )    )
 }
+
+const ItemContainer = styled.nav`
+    div .card{
+        min-width: 28rem ;
+        display: flex;
+    }
+    {
+    font-weight: bold;
+    color: #a2c2a6;
+    text-align: center;
+    background-color: #f2ecaa;
+}
+    `
 
 export default Menu;

@@ -14,6 +14,9 @@ const Home = () => {
 };
 
 const HomeContainer = styled.nav`
+  img{
+    position: relative;
+  }
   {
     font-weight: bold;
     color: #a2c2a6;
@@ -21,8 +24,9 @@ const HomeContainer = styled.nav`
     text-align: center;
     background-color: #f2ecaa;
     display: flex;
-    align-items: right;
-    justify-content: space-around;
+    align-items: left;
+    justify-content: space-between;
+    position: absolute;
     `
 
 export default Home;
