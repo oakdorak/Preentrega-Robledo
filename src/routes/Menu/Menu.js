@@ -13,11 +13,13 @@ const Menu = () => {
     return (
         productos.map((prod) =>
     <ItemContainer>
+    <div>   
     <div className="card" key={prod.id}>
             <h1> Gomita de {prod.title}</h1><br></br>
-                <img src={prod.img} height='100' width='100' alt="" /><br></br>
+            <img src={prod.img} height='100' width='100' alt="" /><br></br>
            <p>{prod.concentracion} - ${prod.precio}</p>
            <button>más info</button>
+    </div>
     </div>
     </ItemContainer>
         )    )
@@ -29,12 +31,16 @@ const ItemContainer = styled.nav`
         border-radius: $radius;
         min-width:16rem;
     }
-    *{
-    max-width: 18rem;
+    {
+    max-width: 100%;
     font-weight: bold;
     color: #a2c2a6;
     text-align: center;
     background-color: #f2ecaa;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
 }
     `
 

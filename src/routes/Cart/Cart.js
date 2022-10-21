@@ -5,9 +5,7 @@ const Cart = () => {
   return <CartContainer>
   <div>Soy un carrito
   </div>;
-
   </CartContainer>
-  
 };
 
 const CartContainer = styled.nav`

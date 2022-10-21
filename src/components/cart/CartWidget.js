@@ -7,7 +7,7 @@ const Carrito = () => {
     
     return(<div>
         <FontAwesomeIcon icon={faCannabis} color='#a2c2a6' />
-        <Link to={`/carrito`}></Link>
+        <Link to={`/cart`}></Link>
     </div>
     )
 }
